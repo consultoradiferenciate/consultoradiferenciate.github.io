@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Consultora Diferénciate | Coaching y Consultoría</title>
+  <meta name="description" content="Coaching personal y organizacional, consultoría en RRHH, estrategia, marketing y capacitaciones. Modalidad presencial y online." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <!-- Open Graph (para compartir en WhatsApp/LinkedIn) -->
+  <meta property="og:title" content="Consultora Diferénciate" />
+  <meta property="og:description" content="Coaching, consultoría y capacitaciones para potenciar el desempeño organizacional." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --muted:#9fb0d0;
+      --text:#eef2ff;
+      --brand:#6ee7ff;
+      --brand2:#a78bfa;
+      --line:rgba(255,255,255,.08);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(110,231,255,.25), transparent 60%),
+        radial-gradient(1000px 700px at 90% 10%, rgba(167,139,250,.22), transparent 60%),
+        linear-gradient(180deg, #070b14, var(--bg));
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .container{max-width:1100px; margin:0 auto; padding:0 18px}
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 10px 20px rgba(110,231,255,.15);
+    }
+    nav ul{display:flex; gap:14px; list-style:none; margin:0; padding:0; flex-wrap:wrap}
+    nav a{color:var(--muted); font-size:14px}
+    nav a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:600; font-size:14px;
+      gap:8px;
+    }
+    .btn.primary{
+      border:none;
+      background: linear-gradient(135deg, rgba(110,231,255,.95), rgba(167,139,250,.95));
+      color:#081022;
+      box-shadow: 0 12px 24px rgba(110,231,255,.18);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .hero{padding:64px 0 34px}
+    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:26px; align-items:center}
+    .kicker{color:var(--brand); font-weight:700; letter-spacing:.5px; text-transform:uppercase; font-size:12px}
+    h1{font-size:44px; line-height:1.05; margin:10px 0 14px}
+    .lead{color:var(--muted); font-size:18px; max-width:52ch}
+    .hero-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .card{
+      background: rgba(17,26,46,.72);
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card{padding:18px}
+    .stats{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:12px}
+    .stat{padding:14px; border-radius:16px; border:1px solid var(--line); background: rgba(255,255,255,.03)}
+    .stat b{display:block; font-size:18px}
+    .stat span{color:var(--muted); font-size:12px}
+    section{padding:44px 0}
+    .section-title{display:flex; justify-content:space-between; gap:18px; align-items:flex-end; margin-bottom:18px}
+    .section-title h2{margin:0; font-size:26px}
+    .section-title p{margin:0; color:var(--muted); max-width:70ch}
+    .grid3{display:grid; grid-template-columns: repeat(3,1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns: repeat(2,1fr); gap:14px}
+    .tile{padding:18px}
+    .tile h3{margin:6px 0 8px; font-size:18px}
+    .tile p{margin:0; color:var(--muted); font-size:14px}
+    .pill{
+      display:inline-flex; align-items:center;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:12px;
+      gap:8px;
+    }
+    .list{margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:14px}
+    .list li{margin:6px 0}
+    .cta{
+      padding:22px;
+      background:
+        radial-gradient(500px 250px at 10% 0%, rgba(110,231,255,.22), transparent 60%),
+        radial-gradient(500px 250px at 90% 0%, rgba(167,139,250,.20), transparent 60%),
+        rgba(17,26,46,.72);
+    }
+    form{display:grid; gap:10px; margin-top:10px}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background: rgba(7,11,20,.55);
+      color:var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .footer{
+      padding:28px 0 40px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:13px;
+    }
+    .whatsapp{
+      position:fixed; right:18px; bottom:18px; z-index:60;
+      width:54px; height:54px; border-radius:18px;
+      display:flex; align-items:center; justify-content:center;
+      background: linear-gradient(135deg, #25D366, #1ea856);
+      box-shadow: 0 18px 35px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.18);
+    }
+    .whatsapp svg{width:26px; height:26px; fill:#06110a}
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="logo" aria-hidden="true"></span>
+        <span>Consultora Diferénciate</span>
+      </a>
+
+      <nav aria-label="Secciones">
+        <ul>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
+          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn primary" href="#contacto">Agendar una conversación</a>
+    </div>
+  </header>
+
+  <main id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker">Coaching • Consultoría • Capacitaciones</div>
+        <h1>Potencia el desempeño de tu organización con estrategias claras y acompañamiento práctico.</h1>
+        <p class="lead">
+          Coaching organizacional y personal, consultoría en RRHH, modelo de negocios, planificación estratégica y marketing.
+          Modalidad presencial, online o híbrida.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#contacto">Quiero una propuesta</a>
+          <a class="btn" href="#servicios">Ver servicios</a>
+          <a class="btn" href="mailto:vidalortegajose@gmail.com">Escribir por correo</a>
+        </div>
+      </div>
+
+      <aside class="card hero-card">
+        <div class="pill">✔ Enfoque aplicado</div>
+        <h3 style="margin:10px 0 6px">¿Qué obtienes?</h3>
+        <ul class="list">
+          <li>Diagnóstico breve y plan de acción.</li>
+          <li>Acompañamiento y seguimiento de resultados.</li>
+          <li>Herramientas: Análisis Transaccional + PNL.</li>
+        </ul>
+
+        <div class="stats">
+          <div class="stat"><b>+15 años</b><span>de experiencia</span></div>
+          <div class="stat"><b>Presencial / Online</b><span>modalidad flexible</span></div>
+          <div class="stat"><b>Programas a medida</b><span>según tu contexto</span></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <section id="servicios">
+    <div class="container">
+      <div class="section-title">
+        <h2>Servicios</h2>
+        <p>Intervenciones modulares: puedes partir con un diagnóstico y escalar a un programa completo.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card tile">
+          <div class="pill">Coaching</div>
+          <h3>Coaching Organizacional y Personal</h3>
+          <p>Procesos para liderazgo, desempeño, comunicación, gestión del cambio y desarrollo de equipos.</p>
+        </div>
+
+        <div class="card tile">
+          <div class="pill">RRHH</div>
+          <h3>Consultoría en Recursos Humanos</h3>
+          <p>Selección, desempeño, cultura, clima, estructura, competencias y procesos de gestión.</p>
+        </div>
+
+        <div class="card tile">
+          <div class="pill">Estrategia</div>
+          <h3>Modelo de Negocios y Planificación</h3>
+          <p>Definición estratégica, objetivos, KPIs, hoja de ruta y alineamiento con stakeholders.</p>
+        </div>
+
+        <div class="card tile">
+          <div class="pill">Marketing</div>
+          <h3>Marketing Operativo y Estratégico</h3>
+          <p>Propuesta de valor, segmentación, posicionamiento, embudo comercial y planes por canal.</p>
+        </div>
+
+        <div class="card tile">
+          <div class="pill">Capacitación</div>
+          <h3>Talleres, Conferencias y Relatorías</h3>
+          <p>Diseño e impartición de talleres presenciales y online orientados a resultados.</p>
+        </div>
+
+        <div class="card tile">
+          <div class="pill">Selección</div>
+          <h3>Apoyo en Selección</h3>
+          <p>Evaluación con herramientas de PNL y comunicación no verbal (según necesidad del rol).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="metodologia">
+    <div class="container">
+      <div class="section-title">
+        <h2>Metodología</h2>
+        <p>Un proceso simple, medible y con entregables claros.</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card tile">
+          <div class="pill">1</div>
+          <h3>Diagnóstico</h3>
+          <p>Levantamiento de contexto, objetivos y brechas. Definimos alcance y éxito esperado.</p>
+        </div>
+        <div class="card tile">
+          <div class="pill">2</div>
+          <h3>Intervención</h3>
+          <p>Sesiones, talleres o consultoría. Herramientas: Análisis Transaccional + PNL.</p>
+        </div>
+        <div class="card tile">
+          <div class="pill">3</div>
+          <h3>Seguimiento</h3>
+          <p>Indicadores, retroalimentación y ajustes. Consolidación de prácticas y resultados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-title">
+        <h2>Sobre mí</h2>
+        <p>
+          Ingeniero, MBA y Coach profesional. Más de 15 años apoyando a personas y organizaciones en desarrollo y desempeño.
+        </p>
+      </div>
+
+      <div class="grid2">
+        <div class="card tile">
+          <h3>Lo que priorizo</h3>
+          <ul class="list">
+            <li>Claridad estratégica y foco en ejecución.</li>
+            <li>Comunicación efectiva y liderazgo.</li>
+            <li>Diseños a medida según tu cultura y etapa.</li>
+          </ul>
+        </div>
+
+        <div class="card tile">
+          <h3>Entregables típicos</h3>
+          <ul class="list">
+            <li>Informe de diagnóstico (brechas + oportunidades).</li>
+            <li>Plan de acción por etapas (30/60/90 días).</li>
+            <li>Indicadores y pauta de seguimiento.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios">
+    <div class="container">
+      <div class="section-title">
+        <h2>Testimonios</h2>
+        <p>Cuando tengas testimonios reales, los insertamos aquí (ideal: nombre, cargo y empresa).</p>
+      </div>
+
+      <div class="grid3">
+        <div class="card tile">
+          <p style="margin:0; color:var(--muted)">“Excelente acompañamiento, nos ayudó a ordenar prioridades y mejorar la comunicación del equipo.”</p>
+          <p style="margin:10px 0 0"><b>Nombre Apellido</b><br><span style="color:var(--muted); font-size:13px">Cargo – Empresa</span></p>
+        </div>
+        <div class="card tile">
+          <p style="margin:0; color:var(--muted)">“Sesiones muy prácticas. Salimos con un plan claro y herramientas para sostener cambios.”</p>
+          <p style="margin:10px 0 0"><b>Nombre Apellido</b><br><span style="color:var(--muted); font-size:13px">Cargo – Empresa</span></p>
+        </div>
+        <div class="card tile">
+          <p style="margin:0; color:var(--muted)">“Taller dinámico y aplicable. Se notó experiencia y metodología.”</p>
+          <p style="margin:10px 0 0"><b>Nombre Apellido</b><br><span style="color:var(--muted); font-size:13px">Cargo – Empresa</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <p>Cuéntame brevemente tu necesidad y te respondo con una propuesta o una llamada de diagnóstico.</p>
+      </div>
+
+      <div class="card cta">
+        <div class="grid2">
+          <div>
+            <h3 style="margin:0 0 10px">Datos directos</h3>
+            <p style="margin:0; color:var(--muted)">
+              WhatsApp: <a href="https://wa.me/56987699877" class="btn" style="padding:6px 10px; display:inline-flex; margin-left:6px;">+56 9 8769 9877</a><br>
+              Correo: <a href="mailto:vidalortegajose@gmail.com" style="text-decoration:underline">vidalortegajose@gmail.com</a><br>
+              Instagram: <a href="#" style="text-decoration:underline">@josevidalcoaching</a><br>
+              LinkedIn: <a href="#" style="text-decoration:underline">josevidalortega</a>
+            </p>
+
+            <p style="margin:14px 0 0; color:var(--muted); font-size:14px">
+              Si ya tienes un brochure PDF, puedo dejar un botón aquí para descargarlo.
+            </p>
+
+            <a class="btn primary" href="https://wa.me/56987699877?text=Hola%20Jos%C3%A9%2C%20me%20gustar%C3%ADa%20agendar%20una%20conversaci%C3%B3n%20para%20conocer%20sus%20servicios." style="margin-top:12px;">
+              Hablar por WhatsApp
+            </a>
+          </div>
+
+          <!-- Formulario simple (mailto). Para algo más pro: Formspree / Netlify Forms / Google Forms -->
+          <div>
+            <h3 style="margin:0 0 10px">Formulario</h3>
+            <form action="mailto:vidalortegajose@gmail.com" method="post" enctype="text/plain">
+              <input name="Nombre" placeholder="Tu nombre" required />
+              <input name="Email" type="email" placeholder="Tu correo" required />
+              <input name="Asunto" placeholder="Tema (ej: Coaching / RRHH / Taller)" />
+              <textarea name="Mensaje" placeholder="Cuéntame tu necesidad (contexto, objetivo, plazo)"></textarea>
+              <button class="btn primary" type="submit">Enviar</button>
+              <small style="color:var(--muted)">
+                *Este formulario abre tu correo (mailto). Si quieres que llegue directo sin abrir el correo, te lo dejo con un servicio gratuito.
+              </small>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="y"></span> Consultora Diferénciate · Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <a class="whatsapp" aria-label="WhatsApp" href="https://wa.me/56987699877?text=Hola%20Jos%C3%A9%2C%20me%20gustar%C3%ADa%20conocer%20sus%20servicios.">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.56c-.26-.13-1.55-.77-1.79-.86-.24-.09-.42-.13-.6.13-.18.26-.69.86-.85 1.03-.16.18-.31.2-.57.07-.26-.13-1.11-.41-2.11-1.3-.78-.7-1.31-1.56-1.46-1.82-.15-.26-.02-.4.11-.53.12-.12.26-.31.4-.46.13-.15.18-.26.26-.44.09-.18.04-.33-.02-.46-.06-.13-.6-1.45-.82-1.99-.22-.52-.44-.45-.6-.46-.16-.01-.33-.01-.51-.01-.18 0-.46.07-.7.33-.24.26-.92.9-.92 2.19 0 1.29.94 2.54 1.07 2.72.13.18 1.85 2.82 4.48 3.95.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.55-.63 1.77-1.24.22-.61.22-1.13.15-1.24-.07-.11-.24-.18-.5-.31z"/>
+      <path d="M26.66 5.34A13.52 13.52 0 0 0 16.02 1C8.7 1 2.74 6.96 2.74 14.28c0 2.33.61 4.61 1.77 6.62L2.6 31l10.28-1.85a13.2 13.2 0 0 0 3.13.38h.01c7.31 0 13.27-5.96 13.27-13.28 0-3.55-1.38-6.89-3.89-9.41zM16.02 27.2h-.01c-1.03 0-2.05-.14-3.03-.42l-.72-.21-6.1 1.1 1.16-5.95-.24-.76a11 11 0 0 1-1.64-5.86c0-6.08 4.95-11.03 11.04-11.03 2.95 0 5.73 1.15 7.82 3.24a10.98 10.98 0 0 1 3.23 7.81c0 6.09-4.95 11.04-11.03 11.04z"/>
+    </svg>
+  </a>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
